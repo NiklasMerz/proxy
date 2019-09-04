@@ -17,7 +17,7 @@
         if(value.indexOf("://") <= 0) {
             value = "https://" + value;
         }
-        location.href = location.host + "?url=" + encodeURIComponent(value);
+        location.href += "?url=" + encodeURIComponent(value);
     }
 
     </script>
