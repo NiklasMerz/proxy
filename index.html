@@ -1,0 +1,21 @@
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Enter URL
+    </title>
+</head>
+
+<body>
+    <input id="urlfield">
+
+    <button onclick="goto()">GOTO</button>
+
+    <script>
+    
+    function goto() {
+        const value = document.getElementById("urlfield").value;
+        location.href = location.host + "?url=" + encodeURIComponent(value);
+    }
+
+    </script>
+</body>
