@@ -13,7 +13,10 @@
     <script>
     
     function goto() {
-        const value = document.getElementById("urlfield").value;
+        const value = document.getElementById("urlfield").textContent;
+        if(value.indexOf("://") <= 0) {
+            value = "https://" + value;
+        }
         location.href = location.host + "?url=" + encodeURIComponent(value);
     }
 
